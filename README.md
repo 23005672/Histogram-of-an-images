@@ -28,8 +28,8 @@ The Histogram of gray scale image and color image is shown.
 ## Input Grayscale Image and Color Image:
 import cv2
 import matplotlib.pyplot as plt
-gray_image = cv2.imread("ajith 2.jpg")
-color_image = cv2.imread("thalapathy-vijay.jpg",-1)
+gray_image = cv2.imread("gray_image.jpg")
+color_image = cv2.imread("color_image.jpg",-1)
 cv2.imshow("Gray Image",gray_image)
 cv2.imshow("Colour Image",color_image)
 cv2.waitKey(0)
@@ -43,8 +43,8 @@ cv2.destroyAllWindows()
 ### Histogram of Grayscale Image and any channel of Color Image
 ```
 import cv2
-Gray_image = cv2.imread("ajith 2.jpg")
-Color_image = cv2.imread("thalapathy-vijay.jpg")
+Gray_image = cv2.imread("gray_image.jpg")
+Color_image = cv2.imread("color_image.jpg")
 import matplotlib.pyplot as plt
 gray_hist = cv2.calcHist([Gray_image],[0],None,[256],[0,256])
 color_hist = cv2.calcHist([Color_image],[0],None,[256],[0,256])
@@ -78,7 +78,7 @@ cv2.waitKey(0)
 ### Histogram Equalization of Grayscale Image.
 ```
 import cv2
-gray_image = cv2.imread("ajith 2.jpg",0)
+gray_image = cv2.imread("gray_image.jpg",0)
 cv2.imshow('Grey Scale Image',gray_image)
 equ = cv2.equalizeHist(gray_image)
 cv2.imshow("Equalized Image",equ)
